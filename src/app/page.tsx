@@ -1,8 +1,11 @@
 
+"use client";
+import Header from "./features/Home/Header/header";
+
 export default function Home() {
   return (
     <main>
-      <a href="/about">Click me</a>
+      <Header />
     </main>
   );
 }
