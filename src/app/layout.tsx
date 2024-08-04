@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Poppins } from 'next/font/google';
 import { ToastContainer } from "react-toastify";
 import 'react-toastify/dist/ReactToastify.css';
+import Navigation from "./common/Navigation/navigation";
 
 const poppins = Poppins({
   subsets: ['latin'],
@@ -22,25 +23,26 @@ export default function RootLayout({
 }>) {
   return (
 
-      <html lang="en">
-        <head>
-          <link rel="icon" href="./common/Images/icon.svg" />
-        </head>
-        <body className={poppins.className}>
-          {children}
-          <ToastContainer
-            position="top-center"
-            autoClose={3000}
-            hideProgressBar={false}
-            newestOnTop={false}
-            closeOnClick
-            rtl={false}
-            pauseOnFocusLoss
-            draggable
-            pauseOnHover={false}
-            theme="colored"
-          />
-        </body>
-      </html>
+    <html lang="en">
+      <head>
+        <link rel="icon" href="./common/Images/icon.svg" />
+      </head>
+      <body className={poppins.className}>
+        <Navigation />
+        {children}
+        <ToastContainer
+          position="top-center"
+          autoClose={3000}
+          hideProgressBar={false}
+          newestOnTop={false}
+          closeOnClick
+          rtl={false}
+          pauseOnFocusLoss
+          draggable
+          pauseOnHover={false}
+          theme="colored"
+        />
+      </body>
+    </html>
   );
 }
