@@ -3,6 +3,8 @@ import { Poppins } from 'next/font/google';
 import { ToastContainer } from "react-toastify";
 import 'react-toastify/dist/ReactToastify.css';
 import Navigation from "./common/Navigation/navigation";
+import { GlobalStyle } from "./core/StyledComponents/GlobalStyles";
+import StyledComponentsRegistry from "./core/StyledComponents/register";
 
 const poppins = Poppins({
   subsets: ['latin'],
@@ -28,8 +30,11 @@ export default function RootLayout({
         <link rel="icon" href="./common/Images/icon.svg" />
       </head>
       <body className={poppins.className}>
+        <StyledComponentsRegistry>
+          <GlobalStyle />
+          {children}
+        </StyledComponentsRegistry>
         <Navigation />
-        {children}
         <ToastContainer
           position="top-center"
           autoClose={3000}
