@@ -1,3 +1,4 @@
+import { theme } from '@/app/core/StyledComponents/theme';
 import React from 'react';
 import styled from 'styled-components';
 
@@ -9,19 +10,22 @@ interface StyledButtonProps {
 }
 
 const StyledButton = styled.button<StyledButtonProps>`
-  background: ${({ background }) => background};
+  background: ${({ background }) => background === 'green' ? theme.palette.green : theme.palette.blue};  
   color: white;
   border: none;
-  border-radius: 4px;
+  border-radius: 8px;
   cursor: pointer;
-  font-size: 16px;
-  padding: ${({ padding }) => padding || '10px'};
+  font-size: 18px;
+  padding: 12px 32px;
   margin: ${({ margin }) => margin || '5px'};
-
+  transition: 0.3s;
+  font-weight: semiBold;
+  
   &:hover {
-    background: ${({ hoverColor }) => hoverColor || 'darken(background, 10%)'};
+    background: ${({ hoverColor }) => hoverColor === 'lightGreen' ? theme.palette.lightGreen : theme.palette.lightBlue};  
   }
 `;
+
 
 interface JDProps {
   text: string;
@@ -36,11 +40,9 @@ export const Button: React.FC<JDProps> = ({ text, onClick, padding, margin, back
   return (
     <StyledButton
       onClick={onClick}
-      padding={padding}
-      margin={margin}
       background={background}
       hoverColor={hoverColor}
-      {...props}
+
     >
       {text}
     </StyledButton>

@@ -18,13 +18,14 @@ export const Content = styled.div`
     display: grid;
     justify-content: center;
     align-items: center;
-    gap: 8px;
+    gap: 24px;
 `;
 
 export const Title = styled.h1`
     font-size: ${theme.textSize.pageTitle};
     color: ${theme.palette.blue};
     font-weight: normal;
+    text-align: center;
 `;
 
 export const TitleSpan = styled.span`
