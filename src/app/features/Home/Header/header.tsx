@@ -31,7 +31,6 @@ export default function Header() {
                     />
                 </ButtonsWrapper>
             </Content>
-
         </Wrapper>
     );
 }
