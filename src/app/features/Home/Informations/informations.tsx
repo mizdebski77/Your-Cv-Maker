@@ -6,7 +6,7 @@ export default function Informations() {
         <Wrapper>
             {informationsData.map((information, index) => (
                 <InformationWrapper key={index} index={index}>
-                    <Image src={information.img.src} />
+                    <Image src={information.img.src} alt="Information image" />
                     <TextWrapper>
                         <MainText>{information.preText} </MainText>
                         <ColoredText>{information.coloredText}</ColoredText>

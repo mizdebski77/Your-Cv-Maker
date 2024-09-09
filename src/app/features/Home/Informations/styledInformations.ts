@@ -14,7 +14,6 @@ export const Wrapper = styled.div`
     grid-template-columns: 1fr 1fr 1fr;
     justify-content: center;
     align-items: center;
-    margin: 20px;
 
     @media (max-width: ${theme.mediaQuery.lg}) {
         grid-template-columns: 1fr;
