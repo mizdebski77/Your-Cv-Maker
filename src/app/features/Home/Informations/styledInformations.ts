@@ -47,10 +47,18 @@ export const InformationWrapper = styled.div<StyledComponentProps>`
 export const TextWrapper = styled.div`
     display: flex;
     gap: 8px;
+    
+    @media (max-width: ${theme.mediaQuery.lg}) {
+        font-size: 14px;
+    };
 `;
 export const Image = styled.img`
     max-width: 80px;
     width: 100%;
+
+    @media (max-width: ${theme.mediaQuery.lg}) {
+        max-width: 48px;
+    };
 `;
 
 export const MainText = styled.span`
