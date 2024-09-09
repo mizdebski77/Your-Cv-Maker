@@ -15,7 +15,8 @@ export const theme = {
   },
 
   textSize: {
-    pageTitle: '72px'
+    pageTitle: '72px',
+    mediaPageTitle: '32px'
   },
 
   mediaQuery: {

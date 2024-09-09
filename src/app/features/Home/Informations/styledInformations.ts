@@ -1,7 +1,7 @@
 import { theme } from "@/app/core/StyledComponents/theme";
 import { styled } from "styled-components";
 interface StyledComponentProps {
-    index: number;  
+    index: number;
 }
 
 export const Wrapper = styled.div`
@@ -14,6 +14,11 @@ export const Wrapper = styled.div`
     grid-template-columns: 1fr 1fr 1fr;
     justify-content: center;
     align-items: center;
+    margin: 20px;
+
+    @media (max-width: ${theme.mediaQuery.lg}) {
+        grid-template-columns: 1fr;
+    };
 `;
 
 export const InformationWrapper = styled.div<StyledComponentProps>`
@@ -28,7 +33,15 @@ export const InformationWrapper = styled.div<StyledComponentProps>`
 
     ${({ index }) => index % 2 === 0 ? ''
         : `border-left: 2px solid ${theme.palette.green}; 
-        border-right: 2px solid ${theme.palette.green};`}
+        border-right: 2px solid ${theme.palette.green};
+        
+        @media (max-width: ${theme.mediaQuery.lg}) {
+            border-top: 2px solid ${theme.palette.green};
+            border-bottom: 2px solid ${theme.palette.green};
+            border-left: 0px; 
+            border-right: 0px;
+        }`
+    }
 `;
 
 export const TextWrapper = styled.div`

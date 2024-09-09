@@ -17,9 +17,12 @@ const StyledButton = styled.button<StyledButtonProps>`
   cursor: pointer;
   font-size: 18px;
   padding: 12px 32px;
-  margin: ${({ margin }) => margin || '5px'};
   transition: 0.3s;
   font-weight: semiBold;
+
+  @media (max-width: ${theme.mediaQuery.lg}) {
+      font-size: 12px;
+  };
   
   &:hover {
     background: ${({ hoverColor }) => hoverColor === 'lightGreen' ? theme.palette.lightGreen : theme.palette.lightBlue};  

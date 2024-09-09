@@ -11,6 +11,10 @@ export const Wrapper = styled.header`
     min-height: 540px;
     padding: 56px 48px;
     margin: auto;
+
+    @media (max-width: ${theme.mediaQuery.lg}) {
+        padding: 40px 20px;
+    }
 `;
 
 export const Content = styled.div`
@@ -26,6 +30,10 @@ export const Title = styled.h1`
     color: ${theme.palette.blue};
     font-weight: normal;
     text-align: center;
+
+    @media (max-width: ${theme.mediaQuery.lg}) {
+        font-size: ${theme.textSize.mediaPageTitle};
+    };
 `;
 
 export const TitleSpan = styled.span`
@@ -37,4 +45,9 @@ export const ButtonsWrapper = styled.div`
     justify-content: center;
     align-items: center;
     gap: 20px;
+
+    @media (max-width: ${theme.mediaQuery.lg}) {
+        flex-direction: column;
+        gap: 8px;
+    };
 `;
