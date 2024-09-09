@@ -14,6 +14,7 @@ export const Wrapper = styled.header`
 
     @media (max-width: ${theme.mediaQuery.lg}) {
         padding: 40px 20px;
+        min-height: 360px;
     }
 `;
 
