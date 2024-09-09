@@ -1,4 +1,3 @@
-import { Button } from "@/app/common/components/button";
 import { ColoredText, Image, InformationWrapper, MainText, TextWrapper, Wrapper } from "./styledInformations";
 import { informationsData } from "@/app/core/arrays";
 
